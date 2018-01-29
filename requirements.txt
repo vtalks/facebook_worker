@@ -1,2 +1,3 @@
 requests
 schedule
+git+https://github.com/mobolic/facebook-sdk.git#egg=facebook-sdk
