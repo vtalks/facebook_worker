@@ -18,12 +18,19 @@ def job():
 
     logging.debug(talk_json)
 
+    page_id = "2014044952145721"
+    access_token = "2014044952145721|dcgMRZ5624yP3__GwDkBEVZhvSc"
+    url = "https://graph.facebook.com/{:s}/feed?message=test&access_token={:s}".format(page_id, access_token)
+    result = requests.post(url)
+    print(result.text)
+
 
 def main(argv):
     logging.basicConfig(level=logging.DEBUG)
     logging.info('Starting facebook-worker ...')
 
     job()
+    exit(0)
 
     schedule.every(6).hours.do(job)
 
