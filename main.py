@@ -9,7 +9,7 @@ import requests
 def job():
     logging.info("Get a random talk ...")
     # get a random talk
-    r = requests.get('https://vtalks.net/api/random-talk/')
+    r = requests.get('https://vtalks.net/api/talk/random-talk/')
     if r.status_code != 200:
         logging.error("Can't fetch a random talk, response status code is", r.status_code)
         exit(1)
